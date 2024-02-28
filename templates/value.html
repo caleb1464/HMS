@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>value</title>
+</head>
+<body>
+{% for Users in value %}
+<b> FULLNAME :{{ Users.fullname }} </b><br>
+USERNAME :{{ Users.username }} <br>
+EMAIL :{{ Users.email }} <br>
+PASSWORD :{{ Users.password }} <br>
+AGE :{{ Users.age }} <br>
+YEAR OF BIRTH:{{ Users.YearOfBirth }} <br><br>
+{% endfor %}
+
+</body>
+</html>

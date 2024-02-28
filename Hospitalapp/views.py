@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from Hospitalapp.models import Members, Message
+from Hospitalapp.models import Members, Message, Users
 
 
 # Create your views here.
@@ -33,3 +33,13 @@ def login(request):
 
 def upload(request):
     return render(request, 'upload.html')
+
+
+def details(request):
+    details = Message.objects.all()
+    return render(request, 'details.html', {'details': details})
+
+
+def value(request):
+    value = Users.objects.all()
+    return render(request, 'value.html', {'value': value})
