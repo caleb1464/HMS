@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect
-from Hospitalapp.models import Members
+from Hospitalapp.models import Members, Message
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    if request.method == 'POST':
+        messages = Message(name=request.POST['name'], email=request.POST['email'], subject=request.POST['subject'],
+                           message=request.POST['message'])
+        messages.save()
+        return redirect('/')
+    else:
+        return render(request, 'index.html')
 
 
 def innerpage(request):
