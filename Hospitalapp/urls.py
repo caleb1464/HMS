@@ -11,5 +11,6 @@ urlpatterns = [
     path('upload/', views.upload, name='upload'),
     path('details/', views.details, name='details'),
     path('value/', views.value, name='value'),
+    path('adminhome/', views.adminhome, name='adminhome'),
 
 ]

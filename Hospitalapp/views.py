@@ -22,7 +22,7 @@ def register(request):
         members = Members(username=request.POST['username'], email=request.POST['email'],
                           password=request.POST['password'])
         members.save()
-        return redirect('/register')
+        return redirect('/login')
     else:
         return render(request, 'register.html')
 
@@ -43,3 +43,16 @@ def details(request):
 def value(request):
     value = Users.objects.all()
     return render(request, 'value.html', {'value': value})
+
+
+def adminhome(request):
+    if request.method == 'POST':
+        if Members.objects.filter(username=request.POST['username'],
+                                  password=request.POST['password']).exists():
+            member = Members.objects.get(username=request.POST['username'],
+                                         password=request.POST['password'])
+            return render(request, 'adminhome.html', {'member': member})
+        else:
+            return render(request, 'login.html')
+    else:
+        return render(request, 'login.html')
