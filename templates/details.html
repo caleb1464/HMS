@@ -6,13 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Details</title>
+    <style>
+        
+    </style>
 </head>
 <body>
+<h1>MESSAGES RECEIVED</h1>
 {% for message in details %}
-<b>NAME :{{ message.name }}</b> <br>
+NAME :{{ message.name }} <br>
 E-MAIL :{{ message.email }} <br>
 SUBJECT :{{ message.subject }} <br>
-MESSAGE :{{ message.message }} <br><br>    
+MESSAGE :{{ message.message }} <br><br>
+    <hr>
 {% endfor %}
 
 </body>

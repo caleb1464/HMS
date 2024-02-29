@@ -13,7 +13,7 @@ def index(request):
         return render(request, 'index.html')
 
 
-def innerpage(request):
+def inner(request):
     return render(request, 'inner-page.html')
 
 
