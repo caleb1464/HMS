@@ -126,4 +126,4 @@ def stk(request):
             "TransactionDesc": "Web Development Charges"
         }
         response = requests.post(api_url, json=request, headers=headers)
-        return HttpResponse("Success")
+        return HttpResponse(response)
