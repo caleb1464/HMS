@@ -89,8 +89,8 @@ def imagedelete(request, id):
 
 
 def token(request):
-    consumer_key = '77bgGpmlOxlgJu6oEXhEgUgnu0j2WYxA'
-    consumer_secret = 'viM8ejHgtEmtPTHd'
+    consumer_key = 'gUqBhTha6izBkV1Gm8hNoorzH6GmYb7sRaXaRsTBMKahVLFX'
+    consumer_secret = '6M4WbXYMGPeJAv2GNrdYR2pNzf4lcAjUc7DVXzblQY1Yj08D99zUPGrWtEMeYAtf'
     api_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
 
     r = requests.get(api_URL, auth=HTTPBasicAuth(
