@@ -51,6 +51,7 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
+
 class ImageModel(models.Model):
     image = models.ImageField(upload_to='images/')
     title = models.CharField(max_length=50)
